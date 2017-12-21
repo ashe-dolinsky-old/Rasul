@@ -1,0 +1,17 @@
+{
+  "name": "rasul-server",
+  "version": "1.0.0",
+  "description": "Rasul's server portion",
+  "author": "Asheera Dolinsky <ashe.dolinsky@gmail.com>",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-yaml": "^3.1.1",
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2",
+    "socket.io": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  }
+}

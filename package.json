@@ -1,0 +1,7 @@
+{
+  "name": "Rasul",
+  "version": "1.0.0",
+  "description": "Rasul provides remote logging infrastructure for Node.js",
+  "author": "Asheera Dolinsky <ashe.dolinsky@gmail.com>",
+  "license": "MIT"
+}
