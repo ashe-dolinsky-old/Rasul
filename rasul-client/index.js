@@ -15,7 +15,10 @@ const log = message => {
       message,
       meta: {
         time: new Date(),
-        stack: trace.filter(frame => (type => !(type === 'global' || type === null || type === undefined))(frame.getTypeName())).map(frame => ({
+        stack: trace.filter(frame => {
+          let type = frame.getTypeName()
+          return !(type === 'global' || type === null || type === undefined)
+        }).map(frame => ({
           fname: frame.getFileName(),
           line: frame.getLineNumber(),
           col: frame.getColumnNumber(),
