@@ -5,6 +5,9 @@
   "author": "Asheera Dolinsky <ashe.dolinsky@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node ./rasul-server/index.js"
+    "start": "node ./rasul-server/index.js",
+    "bootstrap-server": "cd ./rasul-server && yarn install",
+    "bootstrap-client": "cd ./rasul-client && yarn install",
+    "bootstrap": "yarn bootstrap-client && yarn bootstrap-server"
   }
 }

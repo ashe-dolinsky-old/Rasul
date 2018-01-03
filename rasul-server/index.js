@@ -1,8 +1,7 @@
-const nodeYaml = require('node-yaml')
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const config = nodeYaml.readSync('../config.yaml')
+const config = require('../config')
 
 const logChannel = 'log'
 

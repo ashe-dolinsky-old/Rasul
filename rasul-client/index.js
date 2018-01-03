@@ -1,17 +1,16 @@
-const nodeYaml = require('node-yaml')
-const request = require('request')
 const stackTrace = require('stack-trace')
+const axios = require('axios')
 
-const config = nodeYaml.readSync('../config.yaml')
-const uri = `http://localhost:${config.port}/log`
+const config = require('../config')
+const url = `http://localhost:${config.port}/log`
 
 const log = message => {
   const trace = stackTrace.get()
   const frame = trace[0]
-  request({
-    method: 'POST',
-    uri,
-    json: {
+  axios({
+    method: 'post',
+    url,
+    data: {
       message,
       meta: {
         time: new Date(),
@@ -30,5 +29,7 @@ const log = message => {
     }
   })
 }
+
+log('test')
 
 module.exports = log
