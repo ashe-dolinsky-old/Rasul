@@ -30,6 +30,4 @@ const log = message => {
   })
 }
 
-log('test')
-
 module.exports = log
